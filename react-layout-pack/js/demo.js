@@ -1,6 +1,6 @@
 'use strict';
 
-var require = typeof require === 'undefined' ? function() {} : require;
+var require = typeof require === 'undefined' ? function() {} : require; // eslint-disable-line
 
 var React = window.React || require('react');
 var ReactDom = window.ReactDOM || require('react-dom') || React;
@@ -34,7 +34,8 @@ function getLayout() {
     return packLayout(
         {
             className: 'pack-layout',
-            itemMargin: isWindowLarge() ? 10 : 5
+            itemMargin: isWindowLarge() ? 10 : 5,
+            setHeight: true
         },
 
         imgLi('beer.jpg', 255),
